@@ -207,11 +207,13 @@ header {
 .slide-pagination {
 	background-color: #f2f2f2;
 	border: 1px solid #cccccb;
-	padding: 15px 0 0;
+	padding: 20px 0 2px;
 }
 
 .slide-pagination .carousel-indicators {
 	position: static;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 .slide-pagination .carousel-indicators li {
@@ -221,10 +223,14 @@ header {
 	height: 30px;
 	margin: 0 20px;
 	position: relative;
+	border-radius: 0;
+	box-shadow: 0;
+	-webkit-transition: border-radius .5s linear, box-shadow .5s linear;
+	transition: border-radius .5s linear, box-shadow .5s linear;
 }
 
 .slide-pagination .carousel-indicators li.active {
-	box-shadow: 0 0 2px #333;
+	box-shadow: 0 0 3px #aaa;
 	border-radius: 3px;
 }
 
@@ -242,6 +248,22 @@ header {
 	display: none;
 }
 
+/* ===================================================
+04. Survey Monkey
+=================================================== */
+
+.smcx-embed.smcx-hide-branding > .smcx-iframe-container > .survey-body {
+	background-color: #fff;
+}
+
+.tab-content .smcx-embed {
+	border: none;
+}
+
 .tab-content {
 	padding: 2em 0
+}
+
+.tab-content .smcx-embed, .tab-content .smcx-embed > .smcx-iframe-container {
+	max-width: 100%;
 }
